@@ -10,6 +10,12 @@ class TextCounter extends Component{
         text: ''
     }
 
+    handleChange = (text) => {
+        if(text.length <= this.props.limit){
+            this.setState({text});
+        } 
+    }
+
     render(){
         const { state, props } = this;
         return (
@@ -18,6 +24,7 @@ class TextCounter extends Component{
                     multiline={true}
                     numberOfLines={5}
                     value={state.text}
+                    onChangeText={this.handleChange}
                     style={{borderColor: 'gray', borderWidth: 1}}
                 />
                 <Text>Total: { state.text.length }/{ props.limit }</Text>
