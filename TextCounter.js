@@ -2,12 +2,16 @@ import React, {Component} from 'react';
 import { View, Text, TextInput } from 'react-native';
 
 class TextCounter extends Component{
+    static defaultProps = {
+        limit: 20
+    }
+
     state = {
-        text: 'abc'
+        text: ''
     }
 
     render(){
-        const { state } = this;
+        const { state, props } = this;
         return (
             <View>
                 <TextInput
@@ -16,7 +20,7 @@ class TextCounter extends Component{
                     value={state.text}
                     style={{borderColor: 'gray', borderWidth: 1}}
                 />
-                <Text>Total: { state.text.length }/100</Text>
+                <Text>Total: { state.text.length }/{ props.limit }</Text>
             </View>
         );
     }
