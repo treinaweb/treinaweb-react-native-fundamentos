@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { Constants } from 'expo';
 
+import Form from './components/Form';
 import TodoList from './components/TodoList';
 
 export default class App extends React.Component {
@@ -18,6 +19,7 @@ export default class App extends React.Component {
     const {state} = this;
     return (
       <View style={styles.container}>
+        <Form />
         <TodoList list={state.list} />
       </View>
     );
