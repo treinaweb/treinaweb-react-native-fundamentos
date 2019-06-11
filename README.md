@@ -1,5 +1,5 @@
 
-# TreinaWeb: curso ["React Native - Fundamentos"](https://www.treinaweb.com.br/curso/)
+# TreinaWeb: curso ["React Native - Fundamentos"](https://www.treinaweb.com.br/curso/react-native-fundamentos)
 
 
 
